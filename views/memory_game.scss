@@ -1,0 +1,73 @@
+$flatiron-blue: #26c4ff;
+
+@import url(http://fonts.googleapis.com/css?family=Overlock:400,700,900,400italic,700italic,900italic);
+
+@mixin border-radius($size) {
+  -webkit-border-radius: $size;
+     -moz-border-radius: $size;
+          border-radius: $size;
+}
+
+body {
+  font-family: 'Overlock', 'Helvetica', 'Arial', sans-serif;
+  background: url(/img/shattered-island.gif);
+}
+
+.container {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.board {
+  width: 95%;
+  margin: auto;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+.col6 {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+.value {
+  display: none;
+}
+
+.card {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2.5px solid transparent;
+  background-color: $flatiron-blue;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.chosen {
+    background-color: yellow;
+  }
+
+  &.played {
+    background-color: grey;
+  }
+
+}
+
+h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.button {
+  cursor: pointer;
+  color: white;
+}

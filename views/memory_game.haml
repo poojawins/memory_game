@@ -1,0 +1,17 @@
+%h1 Memory Game
+
+.board
+  - @cards.shuffle.each_slice(4) do |slice|
+    .row
+      - slice.each do |card|
+        = partial :card, @card=card
+
+.button
+  %h2 Play Again!
+
+%footer
+  %div
+  made by pooja pasawala
+
+%script{:src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+%script{:src=>"/memory_game.js"}
