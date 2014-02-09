@@ -24,6 +24,9 @@ $(document).ready(function(){
       if($(".card.chosen").find(".value").eq(0).text() == $(".card.chosen").find(".value").eq(1).text()){
         $chosen.addClass("played");
         $chosen.removeClass("chosen");
+        if ($(".played").length == 12) {
+          alert("You've won!");
+        }
       } else{
         $chosen.find(".picture").addClass("hide");
         $chosen.find(".defaultpic").removeClass("hide");
