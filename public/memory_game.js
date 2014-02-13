@@ -25,7 +25,10 @@ $(document).ready(function(){
         $chosen.addClass("played");
         $chosen.removeClass("chosen");
         if ($(".played").length == 12) {
-          alert("You've won!");
+          var r = confirm("You've won! Play again?");
+          if (r == true) {
+            window.location.reload();
+          }
         }
       } else{
         $chosen.find(".picture").addClass("hide");
