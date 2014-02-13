@@ -5,7 +5,7 @@ Dir.glob('./lib/*.rb') do |model|
   require model
 end
 
-class PoojaMemoryGame < Sinatra::Application
+class MemoryGame < Sinatra::Application
 
   configure do
     set :root, File.dirname(__FILE__)
@@ -20,12 +20,6 @@ class PoojaMemoryGame < Sinatra::Application
     deck = Deck.new("data/js_memory_game.yml")
     @cards = deck.cards
     haml :memory_game
-  end
-
-  get "/decks/:deck_file" do
-    deck = Deck.new("data/#{params[:deck_file]}.yml")
-    @cards = deck.cards
-    haml :deck
   end
 
   helpers do
