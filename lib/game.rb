@@ -4,5 +4,5 @@ class Game
     @name = name
     @deck = deck
   end
-
+  
 end
